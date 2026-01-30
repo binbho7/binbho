@@ -35,6 +35,24 @@ hugo server -D
 hugo new posts/my-new-post.md
 ```
 
+## 部署方式
+
+本项目支持两种部署方式：
+
+### 🚀 方式一：Cloudflare Pages（推荐，最简单）
+
+**适合**：纯静态博客，需要零配置自动部署
+
+查看 [Cloudflare Pages 部署指南](#部署到-cloudflare-pages)
+
+### ⚡ 方式二：Cloudflare Workers（更灵活）
+
+**适合**：需要 API、动态功能或更多控制
+
+查看 [Workers 部署指南](./workers/README.md) 或 [DEPLOY-WORKERS.md](./DEPLOY-WORKERS.md)
+
+---
+
 ## 部署到 Cloudflare Pages
 
 ### 方法 1：通过 Git 集成自动部署

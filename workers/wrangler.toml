@@ -1,0 +1,37 @@
+name = "binbho-blog"
+main = "src/index.ts"
+compatibility_date = "2024-01-01"
+
+# Workers 配置
+[site]
+bucket = "src/public"
+
+# 构建配置
+[build]
+command = "npm run build"
+
+# 环境变量
+[vars]
+BLOG_TITLE = "BINBHo"
+BLOG_URL = "https://www.210918.xyz"
+
+# KV 命名空间（可选，用于缓存）
+# [[kv_namespaces]]
+# binding = "CACHE"
+# id = "your-kv-namespace-id"
+
+# R2 存储（可选，用于存储图片）
+# [[r2_buckets]]
+# binding = "IMAGES"
+# bucket_name = "blog-images"
+
+# 开发环境
+[env.dev]
+name = "binbho-blog-dev"
+
+# 生产环境
+[env.production]
+name = "binbho-blog"
+routes = [
+  { pattern = "www.210918.xyz/*", zone_name = "210918.xyz" }
+]

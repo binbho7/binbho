@@ -1,0 +1,21 @@
+{
+  "name": "binbho-blog-worker",
+  "version": "1.0.0",
+  "description": "BINBHo Blog - Cloudflare Workers",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "npm run build && wrangler deploy",
+    "build:hugo": "cd .. && hugo --gc --minify",
+    "build:copy": "xcopy ..\\public workers\\src\\public /E /I /Y",
+    "build": "npm run build:hugo && npm run build:copy",
+    "preview": "wrangler dev --local"
+  },
+  "dependencies": {
+    "hono": "^4.0.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20231218.0",
+    "wrangler": "^3.0.0"
+  }
+}
