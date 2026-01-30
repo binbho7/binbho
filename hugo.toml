@@ -1,0 +1,109 @@
+baseURL = 'https://www.210918.xyz/'
+languageCode = 'zh-cn'
+title = 'BINBHo'
+theme = 'hugo-theme-stack'
+
+# 分页配置
+paginate = 5
+
+# 启用暗色模式
+[params]
+  defaultTheme = 'auto'
+  # 评论系统配置
+  comments = true
+  # 搜索功能
+  search = true
+
+  # 主页配置
+  [params.sidebar]
+    emoji = "🍥"
+    subtitle = "欢迎来到我的博客"
+
+  # 文章页面配置
+  [params.article]
+    math = false
+    toc = true
+    readingTime = true
+
+  # 列表页面配置
+  [params.list]
+    groupByYear = true
+
+# 菜单配置
+[[menu.main]]
+  identifier = "home"
+  name = "首页"
+  url = "/"
+  weight = 1
+
+[[menu.main]]
+  identifier = "about"
+  name = "关于"
+  url = "/about/"
+  weight = 2
+
+[[menu.main]]
+  identifier = "archives"
+  name = "归档"
+  url = "/archives/"
+  weight = 3
+
+# Markdown 配置
+[markup]
+  [markup.highlight]
+    lineNos = false
+    style = 'monokai'
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+# 隐私配置
+[privacy]
+  [privacy.vimeo]
+    disabled = false
+    simple = true
+
+  [privacy.twitter]
+    disabled = false
+    enableDNT = true
+    simple = true
+
+  [privacy.instagram]
+    disabled = false
+    simple = true
+
+  [privacy.youtube]
+    disabled = false
+    privacyEnhanced = true
+
+[services]
+  [services.instagram]
+    disableInlineCSS = true
+
+  [services.twitter]
+    disableInlineCSS = true
+
+# 评论系统 - Giscus
+[params.comments.giscus]
+  enabled = true
+  repo = "your-username/your-repo"
+  repoId = "your-repo-id"
+  category = "Announcements"
+  categoryId = "your-category-id"
+  mapping = "pathname"
+  theme = "preferred_color_scheme"
+  lang = "zh-CN"
+
+# 搜索功能配置
+[params.search]
+  enable = true
+  type = "fuse"
+  contentLength = 4000
+  placeholder = "搜索文章..."
+  maxResultLength = 10
+  snippetLength = 30
+  highlightTag = "em"
+  absoluteURL = false
+  [params.search.fuse]
+    minlength = 2
+    limit = 10

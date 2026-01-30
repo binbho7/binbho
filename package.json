@@ -1,0 +1,19 @@
+{
+  "name": "hugo-blog",
+  "version": "1.0.0",
+  "description": "使用 Hugo 构建的博客，部署在 Cloudflare Pages",
+  "scripts": {
+    "build": "hugo --gc --minify",
+    "dev": "hugo server -D --buildDrafts",
+    "clean": "rm -rf public resources",
+    "deploy": "npm run build && wrangler pages deploy public --project-name=hugo-blog"
+  },
+  "keywords": [
+    "hugo",
+    "blog",
+    "cloudflare-pages"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {}
+}
