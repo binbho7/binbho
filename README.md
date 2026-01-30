@@ -1,6 +1,6 @@
-# 我的 Hugo 博客
+# BINBHo 博客
 
-这是一个使用 Hugo 构建的静态博客，支持部署到 Cloudflare Pages。
+这是 binbho7 的个人博客，使用 Hugo 构建的静态博客，部署在 Cloudflare Pages。
 
 ## 功能特性
 
